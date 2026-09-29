@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🏋️ FitLog - Modern Workout Tracker & Gym Companion
 
-## Getting Started
+> **Train with intent. Log every set.**  
+> FitLog is a sleek, dark-themed gym companion and workout planning web application designed to help fitness enthusiasts discover exercises, plan daily routines, track workouts, and monitor training volume effortlessly.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📖 Short Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**FitLog** is a responsive, fast, and intuitive fitness web application built with Next.js and TypeScript. It offers an organized library of exercises covering major muscle groups, comprehensive exercise breakdowns, and an interactive workout planning dashboard. Users can add lifts to their daily routine ("Today's Plan"), save exercises for later sessions, sort workouts dynamically, and mark completed sets—all with instantaneous real-time metrics for duration and calorie expenditure.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🛠️ Technologies Used
 
-## Learn More
+FitLog is engineered with modern web technologies for peak performance, responsiveness, and developer ergonomics:
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework**: [Next.js](https://nextjs.org/) (App Router, Server & Client Components, Dynamic Routing)
+- **Language**: [TypeScript](https://www.typescriptlang.org/) (Static type safety & strict interface definitions)
+- **UI Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) & [DaisyUI 5](https://daisyui.com/)
+- **State Management**: React Context API (`WorkoutsContext`)
+- **Notifications**: [React-Toastify](https://fkhadra.github.io/react-toastify/) & [React Hot Toast](https://react-hot-toast.com/)
+- **Typography & Assets**: Custom typography featuring Oswald and Geist fonts, optimized Next.js Image component
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## ⚡ 5 Key Features
 
-## Deploy on Vercel
+### 1. 📚 Comprehensive Workout Library
+Browse a curated catalog of exercises covering every major muscle group (Chest, Back, Legs, Shoulders, Arms, and Core). Each workout card displays muscle tags, equipment requirements, estimated duration, caloric burn, and user ratings at a glance.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. 🔍 In-Depth Workout Breakdown & Step-by-Step Instructions
+Dedicated dynamic route pages (`/workouts/[id]`) provide rich details for each exercise:
+- Muscle group targets and equipment specifications
+- Difficulty tier (Beginner, Intermediate, Advanced)
+- Sets, reps recommendations, and expected calorie burn
+- Step-by-step instructional guides for proper lifting form and safety
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. 🎯 "Today's Plan" Routine Builder & Completion Tracker
+Easily add workouts to your active daily plan. Users can track their session in real-time, view their active routine, and click **"Mark as Done"** to log completed exercises with instant visual feedback and toast notifications.
+
+### 4. 📌 "Save for Later" Bookmarking System
+Organize future training sessions by bookmarking lifts into a dedicated **"Saved"** collection. Seamlessly switch between today's active plan and saved exercises with intuitive tab switching.
+
+### 5. 📊 Real-Time Session Analytics & Dynamic Sorting
+The **My Plan** dashboard calculates aggregate workout stats live:
+- **Total Exercises**: Number of lifts queued in the routine
+- **Total Duration**: Cumulative session workout time (in minutes)
+- **Total Calories Burned**: Estimated energy expenditure (in kcal)
+- **Multi-Criteria Sorting**: Sort active or saved workouts on the fly by **Duration**, **Calories**, or **Rating**.
+
+---
