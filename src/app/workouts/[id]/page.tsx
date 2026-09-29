@@ -3,6 +3,7 @@ import SaveLaterButton from "@/components/workoutDetails-Button/SaveLaterButton"
 import TodaysPlanButton from "@/components/workoutDetails-Button/TodaysPlanButton";
 import Image from "next/image";
 import Link from "next/link";
+import workoutData from "../../../../public/workoutData.json"; // relative import with .json
 
 interface TWorkoutDetailsPage {
     params: Promise<{
@@ -10,18 +11,12 @@ interface TWorkoutDetailsPage {
     }>;
 }
 
-const getWorkout = async (): Promise<Workout[]> => {
-    const response = await fetch("http://localhost:3000/workoutData.json", {
-        cache: "no-store",
-    });
-    const data = await response.json();
-    return data;
-};
+
 
 const WorkoutDetailsPage = async ({ params }: TWorkoutDetailsPage) => {
     const { id } = await params;
-    const workoutData = await getWorkout();
-    const workout = workoutData.find((b: Workout) => String(b.id) === String(id));
+    
+    const workout = (workoutData as Workout[]).find((b: Workout) => String(b.id) === String(id));
 
     if (!workout) {
         return (
